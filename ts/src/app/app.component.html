@@ -60,7 +60,7 @@
 </header>
 
 <main class="wrap">
-    <div class="teste">
+    <div class="video-detalhes">
         <section class="principal">
             <div class="trabalho">
                 <!-- <div class="titulo-trabalho"> -->
@@ -127,119 +127,133 @@ Janeiro
             <div class="cards card-conteudo">
                 <h3 class="card-titulo">Resumo</h3>
                 <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis
-                        felis
-                        ut,
-                        commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor
-                        eros
-                        sed
-                        magna
-                        ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus
-                        nisi
-                        tellus,
-                        ut
-                        viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non
-                        lorem.
-                        Sed id
-                        nisl
-                        metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus
-                        condimentum
-                        orci
+                    <p class="expandido">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis
+                        auctor, mollis
+                        felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus.
+                        Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim
+                        accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus
+                        condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque
+                        sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci
                         id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in
-                        sapien
-                        scelerisque,
-                        ac gravida eros vestibulum. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl
-                        accumsant...
-                        ver
-                        mais
-                    </p>
+                        sapien scelerisque, ac gravida eros vestibulum. Etiam aliquam dictum nisl, vel aliquet enim
+                        accumsan sit ametl accumsant...</p>
+
+                    <!-- <div class="mais-resumo" id="mais-resumo"> -->
+
+                    <article *ngIf="show">
+                        <!-- <pre class="expandido"> -->
+                        <!-- <p> -->
+                        <p class="expandido">
+                            Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat
+                            feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui
+                            nulla, ut faucibus mauris sodales id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt
+                            id elit non, suscipit interdum turpis. Etiam finibus urna libero, eget interdum eros
+                            volutpat ullamcorper. Pellentesque et pretium lorem. Aenean interdum quis diam ac porttitor.
+                            Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet odio.</p>
+                        <p class="expandido">
+                            Nam eget tristique elit, at fermentum tellus. Mauris scelerisque ligula id eleifend feugiat.
+                            Donec eleifend vehicula sem nec dapibus. Integer scelerisque neque dui, in lacinia erat
+                            molestie eu. Phasellus maximus dui eget lacus porta tempor. Ut ex nibh, dignissim quis purus
+                            semper, efficitur facilisis turpis. Praesent blandit elementum ultricies. Aliquam sit amet
+                            enim sit amet nulla pulvinar lobortis consectetur non odio. Phasellus at lacus hendrerit,
+                            vulputate nisi sit amet, viverra mauris. Etiam eu scelerisque orci. Quisque sagittis, mi
+                            vitae pharetra iaculis, orci elit eleifend massa, eu posuere mauris odio id odio. Morbi eu
+                            libero luctus, consectetur lorem vel, interdum sapien. Aenean in porta arcu. Maecenas eu
+                            maximus massa.
+                        </p>
+                        <p class="expandido">
+                            Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta
+                            pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus
+                            quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh,
+                            viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat.
+                            Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.</p>
+                    </article><!-- expandido -->
+                    <a href="#mais-resumo" (click)="showMessage()">ver mais</a>
+
                 </div>
+
             </div>
+            <!-- </div> -->
         </section>
     </div>
 
-    <section class="discussoes">
+    <section>
         <div class="cards card-conteudo">
             <h3 class="card-titulo">Discussões</h3>
-            <div class="formulario">
-                <form>
-                    <!-- <fieldset> -->
-                    <legend>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</legend>
-                    <div class="assunto">
-                        <label for="assunto">Assunto</label>
-                        <input type="text" id="assunto" name="assunto"
-                            placeholder="Defina um tópico sucinto para notificar os autores...">
+
+            <div class="discussoes">
+                <div class="criar-topicos">
+                    <p class="titulo">Compartilhe suas ideias ou dúvidas com os autores!</p>
+                    <div class="icones-discussoes">
+                        <img src="./assets/icone1.png" alt="">
+                        <img src="./assets/icone2.png" alt="">
+                        <img src="./assets/icone3.png" alt="">
                     </div>
-                    <div class="conteudo">
-                        <label for="conteudo">Conteúdo</label>
-                        <textarea name="conteudo" id="conteudo" cols="30" rows="10"></textarea>
+                    <pre>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus
+                        questionamentos ou sugestões para o autor!</pre>
+                    <a href="#"><img src="./assets/topico-button.png" alt=""></a>
+                </div>
+
+                <div class="pergunta cards">
+                    <div class="pergunta-titulo">
+                        <p class="titulo">Assunto da pergunta aparece aqui</p>
+                        <p>Carlos Henrique Santos</p>
                     </div>
-                    <div class="botao">
-                        <input type="submit" value="Submit">
-                    </div><!-- </fieldset> -->
-                </form>
+                    <pre class="expandido">
+
+Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de
+processo formativo processo...</pre>
+                    <div class="icones-pergunta">
+                        <img src="./assets/mais-informacoes.png" alt="">
+                        <img src="./assets/favoritar.png" alt="">
+                        <p>1 Like</p>
+                        <p>1 Resposta</p>
+                    </div>
+                </div>
+
+                <div class="pergunta cards">
+                    <div class="pergunta-titulo">
+                        <p class="titulo">Assunto da pergunta aparece aqui</p>
+                        <p>Carlos Henrique Santos</p>
+                    </div>
+                    <pre class="expandido">
+
+Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de
+processo formativo processo...</pre>
+                    <div class="icones-pergunta">
+
+                        <img src="./assets/mais-informacoes.png" alt="">
+                        <img src="./assets/favoritar.png" alt="">
+                        <p>1 Like</p>
+                        <p>1 Resposta</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!-- <div class="discussoes border">
-        <p>Discussões</p>
-        <div class="discussoes-img">
-            <p>Compartilhe suas ideias ou dúvidas com os autores!</p>
-            <img src="./assets/icone1.png" alt="">
-            <img src="./assets/icone2.png" alt="">
-            <img src="./assets/icone3.png" alt="">
 
-            <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus
-                questionamentos ou sugestões para o autor!</p>
-            <button>criar tópico</button>
-
-            <div class="card-pergunta">
-                <div class="card-pergunta-titulo">
-                    <p>Assunto da pergunta aparece aqui</p>
-                    <p>Carlos Henrique Santos</p>
-                </div>
-                <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e
-                    impacto
-                    de processo formativo situado impacto de processo formativo processo...</p>
-                <div class="card-pergunta-icones">
-
-                    <img src="./assets/mais-informacoes.png" alt="">
-                    <img src="./assets/favoritar.png" alt="">
-                    <p>1 Like</p>
-                    <p>1 Resposta</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-titulo">
-                    <p>Assunto da pergunta aparece aqui</p>
-                    <p>Carlos Henrique Santos</p>
-                </div>
-                <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e
-                    impacto
-                    de processo formativo situado impacto de processo formativo processo...</p>
-                <div class="card-icones">
-
-                    <img src="./assets/mais-informacoes.png" alt="">
-                    <img src="./assets/favoritar.png" alt="">
-                    <p>1 Like</p>
-                    <p>1 Resposta</p>
-                </div>
-            </div>
-        </div>
-
-    </div> -->
-
-
-    <!-- <div class="wrap footer">
+    <div class="wrap footer">
         <div class="img-footer">
             <img src="./assets/footer.png" alt="">
         </div>
-    </div> -->
+    </div>
 </main>
-<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script> -->
+<!-- FORMULÁRIO AINDA NÃO UTILIZADO -->
+<!-- <div class="formulario">
+    <form>
+        <legend>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</legend>
+        <div class="assunto">
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="assunto"
+                placeholder="Defina um tópico sucinto para notificar os autores...">
+        </div>
+        <div class="conteudo">
+            <label for="conteudo">Conteúdo</label>
+            <textarea name="conteudo" id="conteudo" cols="30" rows="10"></textarea>
+        </div>
+        <div class="botao">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div> -->

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DevChuva';
+  
+  show: boolean = false;
+  showMessage(): void{
+    this.show = !this.show;
+  }
 }

@@ -379,8 +379,6 @@ h1 {
 .cards {
   border: solid 1px rgba(114, 92, 92, 0.4);
   border-radius: 4px;
-
- 
 }
 
 // .cards-header {
@@ -407,8 +405,25 @@ h1 {
   font-size: 0.87em;
 }
 
+.resumo a {
+  color: var(--cor-laranja);
 
-.card-citacoes{
+  // overflow-x: auto;
+  // white-space: pre-wrap;
+  // word-wrap: break-word;
+  font-size: 1.2em;
+}
+
+.expandido {
+  white-space: wrap;
+  padding-bottom: 2em;
+}
+
+.mais_resumo {
+  display: none;
+}
+
+.card-citacoes {
   margin-left: 2em;
   border-top: 0;
   overflow: auto;
@@ -418,7 +433,7 @@ h1 {
   color: rgba(114, 92, 92, 0.4);
 }
 
-.teste {
+.video-detalhes {
   display: flex;
   flex-direction: column;
 }
@@ -428,20 +443,65 @@ h1 {
   border-top: 10em;
 }
 
-.formulario{
+.discussoes {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+
+  // justify-content: space-between;
+  // align-items: space;
+}
+
+.formulario,
+.criar-topicos {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  width: 400px;
+  padding: 3em;
+  // width: 400px;
 }
 
-form div + div {
-  margin-top: 1em;
+.criar-topicos {
+  // display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
 }
 
-.formulario label{
+.icones-discussoes {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.criar-topicos a {
+  margin-top: 2em;
+}
+
+.pergunta{
+  margin: 1em;
+  padding: .5em;
+  box-shadow: 3px #725c5c;
+}
+.icones-pergunta{
+  display: flex;
+  // align-items: self-start;
+  // justify-content:space-evenly;
+  align-items: center;
+}
+
+
+.icones-pergunta p,
+.icones-pergunta img{
+  margin: 1em 1em;
+}
+.formulario label, .titulo {
   color: var(--cor-laranja);
+}
+
+.titulo{
+
+  padding: 1em;
 }
 
 label {
@@ -450,15 +510,17 @@ label {
   width: 90px;
 }
 
-.assunto, .conteudo{
+.assunto,
+.conteudo {
   display: flex;
   flex-direction: column;
 }
 
-.botao{
+.botao {
   display: flex;
   align-items: flex-end;
 }
+
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
   .card-container > *:not(.circle-link),
