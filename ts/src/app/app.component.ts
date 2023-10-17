@@ -8,8 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'DevChuva';
   
+
+ showTopico: boolean = true;
+
   show: boolean = false;
   showMessage(): void{
     this.show = !this.show;
+    this.showTopico = !this.showTopico ;
   }
+  
+  // showTopico: boolean = true;
+  // showMessageTopico(): void{
+  //   this.showTopico = !this.showTopico;
+  // }
 }

@@ -140,7 +140,7 @@ Janeiro
 
                     <!-- <div class="mais-resumo" id="mais-resumo"> -->
 
-                    <article *ngIf="show">
+                    <div *ngIf="show">
                         <!-- <pre class="expandido"> -->
                         <!-- <p> -->
                         <p class="expandido">
@@ -168,7 +168,7 @@ Janeiro
                             viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat.
                             Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit.</p>
-                    </article><!-- expandido -->
+                    </div><!-- expandido -->
                     <a href="#mais-resumo" (click)="showMessage()">ver mais</a>
 
                 </div>
@@ -183,7 +183,8 @@ Janeiro
             <h3 class="card-titulo">Discussões</h3>
 
             <div class="discussoes">
-                <div class="criar-topicos">
+                <div class="criar-topicos" *ngIf="showTopico">
+                    <!--  *ngIf="showTopico" -->
                     <p class="titulo">Compartilhe suas ideias ou dúvidas com os autores!</p>
                     <div class="icones-discussoes">
                         <img src="./assets/icone1.png" alt="">
@@ -192,8 +193,27 @@ Janeiro
                     </div>
                     <pre>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus
                         questionamentos ou sugestões para o autor!</pre>
-                    <a href="#"><img src="./assets/topico-button.png" alt=""></a>
+                    <a href="#formulario" (click)="showMessage()"><img src="./assets/topico-button.png" alt=""></a>
                 </div>
+
+                 <!-- NOVO TÓPICO -->
+            <div id="formulario" class="formulario" div *ngIf="show">
+                <form>
+                    <legend>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</legend>
+                    <div class="assunto">
+                        <label for="assunto">Assunto</label>
+                        <input type="text" id="assunto" name="assunto"
+                            placeholder="Defina um tópico sucinto para notificar os autores...">
+                    </div>
+                    <div class="conteudo">
+                        <label for="conteudo">Conteúdo</label>
+                        <textarea name="conteudo" id="conteudo" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="botao">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
 
                 <div class="pergunta cards">
                     <div class="pergunta-titulo">
@@ -230,30 +250,14 @@ processo formativo processo...</pre>
                     </div>
                 </div>
             </div>
+
+           
         </div>
     </section>
 
-    <div class="wrap footer">
+    <div class="footer">
         <div class="img-footer">
             <img src="./assets/footer.png" alt="">
         </div>
     </div>
 </main>
-<!-- FORMULÁRIO AINDA NÃO UTILIZADO -->
-<!-- <div class="formulario">
-    <form>
-        <legend>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</legend>
-        <div class="assunto">
-            <label for="assunto">Assunto</label>
-            <input type="text" id="assunto" name="assunto"
-                placeholder="Defina um tópico sucinto para notificar os autores...">
-        </div>
-        <div class="conteudo">
-            <label for="conteudo">Conteúdo</label>
-            <textarea name="conteudo" id="conteudo" cols="30" rows="10"></textarea>
-        </div>
-        <div class="botao">
-            <input type="submit" value="Submit">
-        </div>
-    </form>
-</div> -->
