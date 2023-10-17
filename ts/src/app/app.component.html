@@ -138,11 +138,8 @@ Janeiro
                         sapien scelerisque, ac gravida eros vestibulum. Etiam aliquam dictum nisl, vel aliquet enim
                         accumsan sit ametl accumsant...</p>
 
-                    <!-- <div class="mais-resumo" id="mais-resumo"> -->
-
                     <div *ngIf="show">
-                        <!-- <pre class="expandido"> -->
-                        <!-- <p> -->
+
                         <p class="expandido">
                             Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat
                             feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui
@@ -178,13 +175,12 @@ Janeiro
         </section>
     </div>
 
-    <section>
+    <section id="discussoes">
         <div class="cards card-conteudo">
             <h3 class="card-titulo">Discussões</h3>
 
             <div class="discussoes">
-                <div class="criar-topicos" *ngIf="showTopico">
-                    <!--  *ngIf="showTopico" -->
+                <div class="criar-topicos" *ngIf="showCriarTopico ">
                     <p class="titulo">Compartilhe suas ideias ou dúvidas com os autores!</p>
                     <div class="icones-discussoes">
                         <img src="./assets/icone1.png" alt="">
@@ -193,27 +189,48 @@ Janeiro
                     </div>
                     <pre>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus
                         questionamentos ou sugestões para o autor!</pre>
-                    <a href="#formulario" (click)="showMessage()"><img src="./assets/topico-button.png" alt=""></a>
                 </div>
 
-                 <!-- NOVO TÓPICO -->
-            <div id="formulario" class="formulario" div *ngIf="show">
-                <form>
-                    <legend>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</legend>
-                    <div class="assunto">
-                        <label for="assunto">Assunto</label>
-                        <input type="text" id="assunto" name="assunto"
-                            placeholder="Defina um tópico sucinto para notificar os autores...">
+                <!-- novo tópico -->
+                <div id="formulario" class="formulario" *ngIf="showFormularioTopico">
+                    <form>
+                        <legend>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</legend>
+                        <div class="assunto">
+                            <label for="assunto">Assunto</label>
+                            <input type="text" id="assunto" name="assunto"
+                                placeholder="Defina um tópico sucinto para notificar os autores...">
+                        </div>
+
+                        <div class="conteudo">
+                            <label for="conteudo">Conteúdo</label>
+                            <textarea name="conteudo" id="conteudo" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="botao">
+                            <a href="#discussoes" (click)="showMessageFormulario()">Enviar</a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- topico enviado -->
+                <div id="enviar-topicos" class="enviar-topicos" *ngIf="showEnviarTopico">
+                    <div class="feedback">
+                        <p class="titulo">Seu tópico foi enviado com sucesso! :D</p>
+                        <p>Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu
+                            tópico
+                            for respondido!</p>
+                        <a href="#trabalhos" class="titulo">Descubra outros trabalhos!</a>
                     </div>
-                    <div class="conteudo">
-                        <label for="conteudo">Conteúdo</label>
-                        <textarea name="conteudo" id="conteudo" cols="30" rows="10"></textarea>
+                    <div class="cards feedback">
+                        <img src="./assets/topico.png" alt="">
+                        <p>Aguardando feedback dos autores</p>
+                        <p>Editar tópico</p>
                     </div>
-                    <div class="botao">
-                        <input type="submit" value="Enviar">
-                    </div>
-                </form>
-            </div>
+                </div>
+
+                <div class="btnCriarTopico" *ngIf="showCriarTopico showBtnCriarTopico">
+                    <a href="#discussoes" (click)="showMessageTopico()"><img src="./assets/topico-button.png"
+                            alt=""></a>
+                </div>
 
                 <div class="pergunta cards">
                     <div class="pergunta-titulo">
@@ -245,13 +262,50 @@ processo formativo processo...</pre>
 
                         <img src="./assets/mais-informacoes.png" alt="">
                         <img src="./assets/favoritar.png" alt="">
-                        <p>1 Like</p>
-                        <p>1 Resposta</p>
+                        <p>4 Likes</p>
+                        <p>4 Respostas</p>
                     </div>
+<!-- accordion -->
+<div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          Accordion Item #1
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          Accordion Item #2
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          Accordion Item #3
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+      </div>
+    </div>
+  </div>
+
+
+
+
                 </div>
             </div>
 
-           
+
         </div>
     </section>
 
