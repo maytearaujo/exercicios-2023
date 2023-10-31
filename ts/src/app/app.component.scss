@@ -458,6 +458,16 @@ h1 {
   align-items: center;
 }
 
+.btn-create-topic{
+  width: 80px;
+  height: 25px;
+  background-color: #ed7839;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+
+}
+
 .criar-topicos a {
   margin-top: 2em;
 }
@@ -480,6 +490,10 @@ h1 {
 }
 .formulario label, .titulo {
   color: var(--cor-laranja);
+}
+
+legend{
+  margin: 1em;
 }
 
 .titulo{

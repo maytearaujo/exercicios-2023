@@ -166,7 +166,7 @@ Janeiro
                             Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit.</p>
                     </div><!-- expandido -->
-                    <a href="#mais-resumo" (click)="showMessage()">ver mais</a>
+                    <a href="#mais-resumo" (click)="showMessage()" class="btn-show-more">ver mais</a>
 
                 </div>
 
@@ -197,7 +197,8 @@ Janeiro
                         <legend>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</legend>
                         <div class="assunto">
                             <label for="assunto">Assunto</label>
-                            <input type="text" id="assunto" name="assunto"
+
+                            <input class="subject" type="text" id="assunto" name="assunto"
                                 placeholder="Defina um tópico sucinto para notificar os autores...">
                         </div>
 
@@ -206,7 +207,9 @@ Janeiro
                             <textarea name="conteudo" id="conteudo" cols="30" rows="10"></textarea>
                         </div>
                         <div class="botao">
-                            <a href="#discussoes" (click)="showMessageFormulario()">Enviar</a>
+                            <button (click)="showMessageFormulario()">Enviar</button>
+                            <!-- <a href="#discussoes" >Enviar</a> -->
+                            <!-- <a href="#discussoes" (click)="showMessageFormulario()">Enviar</a> -->
                         </div>
                     </form>
                 </div>
@@ -228,13 +231,14 @@ Janeiro
                 </div>
 
                 <div class="btnCriarTopico" *ngIf="showCriarTopico showBtnCriarTopico">
-                    <a href="#discussoes" (click)="showMessageTopico()"><img src="./assets/topico-button.png"
-                            alt=""></a>
+                    <a href="#discussoes" (click)="showMessageTopico()" class="btn-create-topic">criar tópico</a>
+                    <!-- <a href="#discussoes" (click)="showMessageTopico()" class="btn-create-topic">criar tópico<img src="./assets/topico-button.png"
+                            alt=""></a> -->
                 </div>
 
                 <div class="pergunta cards">
                     <div class="pergunta-titulo">
-                        <p class="titulo">Assunto da pergunta aparece aqui</p>
+                        <h4 class="titulo ops-topic-subject">Assunto da pergunta aparece aqui</h4>
                         <p>Carlos Henrique Santos</p>
                     </div>
                     <pre class="expandido">
@@ -248,9 +252,9 @@ processo formativo processo...</pre>
                         <p>4 Respostas</p>
                     </div>
                 </div>
-                <div class="pergunta cards">
+                <div class="pergunta cards answered-topic">
                     <div class="pergunta-titulo">
-                        <p class="titulo">Assunto da pergunta aparece aqui</p>
+                        <h4 class="titulo ops-topic-subject">Assunto da pergunta aparece aqui</h4>
                         <p>Carlos Henrique Santos</p>
                     </div>
                     <pre class="expandido">
@@ -278,7 +282,7 @@ processo formativo processo...</pre>
                     <details>
                         <summary>Carlos Henrique Santos</summary>
 
-                        <p>Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de
+                        <p class="comments-container">Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de
                             processo formativo situado impacto de processo formativo.
 
                             Obrigada pela resposta, muito interessante o seu trabalho! </p>
