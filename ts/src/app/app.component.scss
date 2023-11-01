@@ -541,6 +541,21 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 3em;
+}
+
+.feedback a{
+  color: #ed7839;
+  text-decoration: underline;
+  margin-bottom: 3em;
+}
+
+.aguardando-feedback{
+  background-color: #E7E7E7;
+}
+
+.aguardando-feedback p{
+  font-weight: bold;
 }
 
 details{
@@ -562,10 +577,6 @@ summary{
 summary {
   position: relative;
   list-style: none;
-}
-
-summary::-webkit-details-marker{
-  display: none;
 }
 
 details:nth-child(1) summary::after {
