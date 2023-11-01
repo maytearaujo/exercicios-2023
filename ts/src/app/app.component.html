@@ -52,7 +52,7 @@
 
             <div class="avatar">
                 <img src="./assets/avatar.png" alt="Mulher sorrindo">
-                <span class="badge badge-danger">4</span>
+                <span class="badge">2</span>
             </div>
 
         </div>
@@ -208,8 +208,6 @@ Janeiro
                         </div>
                         <div class="botao">
                             <button (click)="showMessageFormulario()">Enviar</button>
-                            <!-- <a href="#discussoes" >Enviar</a> -->
-                            <!-- <a href="#discussoes" (click)="showMessageFormulario()">Enviar</a> -->
                         </div>
                     </form>
                 </div>
@@ -232,8 +230,6 @@ Janeiro
 
                 <div class="btnCriarTopico" *ngIf="showCriarTopico showBtnCriarTopico">
                     <a href="#discussoes" (click)="showMessageTopico()" class="btn-create-topic">criar tópico</a>
-                    <!-- <a href="#discussoes" (click)="showMessageTopico()" class="btn-create-topic">criar tópico<img src="./assets/topico-button.png"
-                            alt=""></a> -->
                 </div>
 
                 <div class="pergunta cards">
@@ -270,7 +266,7 @@ processo formativo processo...</pre>
                 </div>
 
                 <section class="respostas">
-                    <details class="cards">
+                    <details>
                         <summary>Adriano da Silva</summary>
                         <p>Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e
                             impacto de processo formativo situado impacto de processo formativo processo resente relato
@@ -293,12 +289,13 @@ processo formativo processo...</pre>
                         <p>Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e
                             impacto de processo formativo situado impacto de processo formativo processo resente relato
                             inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto
-                            de processo formativo processo.
+                            de processo formativo processo.</p>
 
-                            Situado impacto de processo formativo processo resente relato inscreve-se no campo da
+                            <p>Situado impacto de processo formativo processo resente relato inscreve-se no campo da
                             análise da dimensão e impacto de processo formativo situado impacto de processo formativo
                             processo.</p>
                     </details>
+
                     <details>
                         <summary>Ana Carolina</summary>
                         <p>Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de
