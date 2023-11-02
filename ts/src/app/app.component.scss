@@ -15,17 +15,6 @@
   color: var(--cor-preto);
 }
 
-// h1,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   margin: 8px 0;
-// }
-
-h2 {
-}
-
 p {
   margin: 0;
 }
@@ -471,12 +460,12 @@ h1 {
 
 .btn-create-topic{
   width: 80px;
-  height: 25px;
-  background-color: #ed7839;
+  height: 30px;
+  background-color: var(--cor-laranja);
   border-radius: 5px;
   color: #fff;
   text-align: center;
-
+  text-decoration: none;
 }
 
 .criar-topicos a {
@@ -517,7 +506,6 @@ legend{
 }
 
 label {
-  /*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
   display: inline-block;
   width: 90px;
 }
@@ -544,18 +532,29 @@ label {
   padding: 3em;
 }
 
-.feedback a{
-  color: #ed7839;
+.feedback p:nth-child(1), .aguardando-feedback p, details summary{
+  font-weight: bold;
+}
+
+.feedback a:nth-child(1){
+  color: var(--cor-laranja);
   text-decoration: underline;
   margin-bottom: 3em;
 }
 
-.aguardando-feedback{
-  background-color: #E7E7E7;
+
+.btnNovoTopico{
+  width: 140px;
+  height: 60px;
+  background-color: var(--cor-laranja);
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
 }
 
-.aguardando-feedback p{
-  font-weight: bold;
+.aguardando-feedback{
+  background-color: #E7E7E7;
 }
 
 details{
@@ -570,10 +569,6 @@ details:nth-child(2) summary{
   list-style: none;
 }
 
-summary{
-  font-weight: bold;
-}
-
 summary {
   position: relative;
   list-style: none;
@@ -581,12 +576,12 @@ summary {
 
 details:nth-child(1) summary::after {
   content: 'Autor '  url(../assets/list.png);
-  color: #ed7839;
+  color: var(--cor-laranja);
 }
 
 details:nth-child(3) summary::after, details:nth-child(4) summary::after {
   content: 'Coautor '  url(../assets/list.png);
-  color: #ed7839;
+  color: var(--cor-laranja);
 }
 
 summary::after {
